@@ -271,10 +271,11 @@ table.v tbody tr:nth-child(even) td{background:transparent}
 
 .hit input{display:block;width:100%;min-height:56px;padding:0 14px;background:var(--panel);border:1.5px solid var(--line);border-radius:14px;color:var(--ink);text-align:center;font:700 22px "Space Grotesk",sans-serif;-webkit-backdrop-filter:none;backdrop-filter:none}
 .dock.two>div{grid-template-columns:auto 1fr}.dock.two button:not(.cta){padding:0 18px;white-space:nowrap}
-.game .rows{flex:0 1 auto;min-height:0}
+.game{height:auto;min-height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}
+.game .rows{flex:none;min-height:auto;overflow:visible}
 .game .cm{flex:none;margin:12px 0 0}
-.game .cm .ct{max-height:24vh}
-.game .dock{margin-top:auto}
+.game .cm .ct{max-height:none;overflow:visible}
+.game .dock{position:sticky;bottom:0;z-index:5;margin-top:auto;padding-top:14px}
 </style></head>
 <body><div class="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i></div><canvas id="cf"></canvas><div id="app"></div>
 <script>
